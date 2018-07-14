@@ -1,8 +1,9 @@
-package com.how2java.mapper;
+package com.soto.mapper;
 
 import java.util.List;
 
-import com.how2java.pojo.Category;
+import com.soto.pojo.Category;
+import com.soto.util.Page;
 
 public interface CategoryMapper {
 
@@ -16,6 +17,8 @@ public interface CategoryMapper {
 
     public List<Category> list();
 
-    public int count();
+    public List<Category> list(Page page);
+
+    public int total();
 
 }

@@ -15,8 +15,8 @@
 	
 	
 
-   <context:annotation-config />
-	<context:component-scan base-package="com.how2java.service" />
+    <context:annotation-config />
+	<context:component-scan base-package="com.soto.service" />
 
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
 	  <property name="driverClassName">  
@@ -36,9 +36,9 @@
 	
 	
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="typeAliasesPackage" value="com.how2java.pojo" />
+		<property name="typeAliasesPackage" value="com.soto.pojo" />
 		<property name="dataSource" ref="dataSource"/>
-		<property name="mapperLocations" value="classpath:com/how2java/mapper/*.xml"/>
+		<property name="mapperLocations" value="classpath:com/soto/mapper/*.xml"/>
 		<property name="plugins">
 		    <array>
 		      <bean class="com.github.pagehelper.PageInterceptor">
@@ -53,7 +53,7 @@
 	</bean>
 
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.how2java.mapper"/>
+		<property name="basePackage" value="com.soto.mapper"/>
 	</bean>
 	
 

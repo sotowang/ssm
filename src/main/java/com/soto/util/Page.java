@@ -1,4 +1,4 @@
-package com.how2java.util;
+package com.soto.util;
 
 public class Page {
 
